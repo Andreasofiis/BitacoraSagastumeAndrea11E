@@ -1,181 +1,98 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitácora Sagastume Mijangos</title>
-    <link rel="icon" type="image/png" href="https://www.capouilliez.edu.gt/assets/img/logo.png">
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f2dc;
+    }
 
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8daee;
-        }
+    body {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
 
-        body {
-            display: flex;
-            flex-direction: column;
-            text-align: center;
-        }
+    header {
+        padding: 30px;
+        background-color: #0b788c;
+        border-bottom: 2px solid #6f8790;
+    }
 
-        header {
-            padding: 30px;
-            background-color: #de88e4;
-            border-bottom: 2px solid #570566;
-        }
+    h1 {
+        color: #ffffff;
+        text-transform: uppercase;
+        margin: 0;
+        text-shadow:
+            0 0 5px #dcefe9,
+            0 0 10px #b8d9d5,
+            0 0 20px #8db8b8;
+    }
 
-        h1 {
-            color: #fff;
-            text-transform: uppercase;
-            margin: 0;
-            text-shadow:
-                0 0 5px #fff,
-                0 0 10px #ffffff,
-                0 0 20px #efb4fe,
-                0 0 40px #df55f7,
-                0 0 80px #ba22ce,
-                0 0 90px #c322ce;
-        }
+    main {
+        flex: 1;
+        padding: 40px 20px;
+        max-width: 900px;
+        margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
+    }
 
-        main {
-            flex: 1;
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: 0 auto;
-            width: 100%;
-            box-sizing: border-box;
-        }
+    .semana {
+        background-color: #ffffff;
+        color: #315b63;
+        border-radius: 15px;
+        padding: 25px;
+        margin-bottom: 30px;
+        text-align: left;
+        border-left: 8px solid #86afb2;
+        box-shadow: 0 4px 15px rgba(72, 121, 128, 0.25);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-        .semana {
-            background-color: #ffffff;
-            color: #50034d;
-            border-radius: 15px;
-            padding: 25px;
-            margin-bottom: 30px;
-            text-align: left;
-            border-left: 8px solid #85259d;
-            box-shadow: 0 4px 15px rgba(247, 85, 247, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+    .semana:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(72, 121, 128, 0.35);
+    }
 
-        .semana:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(226, 101, 187, 0.5);
-        }
+    .semana h3 {
+        margin-top: 0;
+        color: #0b788c;
+    }
 
-        .semana h3 {
-            margin-top: 0;
-            color: #ac22ce;
-        }
+    .pdf-container {
+        margin-top: 15px;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid #c9d8cf;
+    }
 
-        .pdf-container {
-            margin-top: 15px;
-            border-radius: 10px;
-            overflow: hidden;
-            border: 1px solid #ddd;
-        }
+    video {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
 
-        video {
-            width: 100%;
-            max-width: 100%;
-            border-radius: 8px;
-            margin-top: 10px;
-        }
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 50px;
+        background-color: #a1ad7e;
+        border-top: 3px solid #86afb2;
+    }
 
-        footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 50px;
-            background-color: rgb(247, 102, 203);
-            border-top: 3px solid #cc55f7;
-        }
+    footer span {
+        font-weight: bold;
+        color: #ffffff;
+    }
 
-        footer span {
-            font-weight: bold;
-            color: #c822ce;
-        }
+    footer img {
+        transition: transform 0.3s ease;
+        cursor: pointer;
+    }
 
-        footer img {
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-
-        footer img:hover {
-            transform: scale(1.3);
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Bitácora Segunda y Tercera Unidad</h1>
-    </header>
-
-    <main>
-        <div class="semana">
-            <h3>Introducción Arduino</h3>
-            <p>
-                Análisis de la plataforma <b>Arduino</b>, componentes electrónicos como el microcontrolador y tipos de señales digitales y análogas.
-            </p>
-
-            <div class="pdf-container">
-                <embed src="Andrea_Sagastume_11E/Introducción Arduino-Andrea Sagastume.pdf" type="application/pdf" width="100%" height="350px" />
-            </div>
-        </div>
-
-        <div class="semana">
-            <h3>Semana 2</h3>
-            <p>Video de circuitos, Arduino R1</p>
-            <video controls>
-                <source src="Andrea_Sagastume_11E/Circuito semana 1 y 2 Andrea 11E.mp4" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
-            </video>
-        </div>
-
-        <div class="semana">
-            <h3>Semana 3</h3>
-            <p>Práctica y demostración de circuitos con sensores analógicos.</p>
-            <video controls>
-                <source src="Andrea_Sagastume_11E/Circuito semana 3 Andrea 11E.mp4" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
-            </video>
-        </div>
-
-        <div class="semana">
-            <h3>Semana 4</h3>
-            <p>Implementación de actuadores y lógica de control.</p>
-            <video controls>
-                <source src="Andrea_Sagastume_11E/Circuito semana 4 Andrea 11E.mp4" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
-            </video>
-        </div>
-
-        <div class="semana">
-            <h3>Semana 5</h3>
-            <p>Desarrollo de proyectos intermedios con Arduino.</p>
-            <video controls>
-                <source src="Semana No.5.mp4" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
-            </video>
-        </div>
-
-        <div class="semana">
-            <h3>Semana 6</h3>
-            <p>Presentación y prueba final del circuito de la unidad.</p>
-            <video controls>
-                <source src="Andrea Sagastume - TINKERCAD (1).mp4" type="video/mp4">
-                Tu navegador no soporta el elemento de video.
-            </video>
-        </div>
-    </main>
-
-    <footer>
-        <span>@andreasofiis</span>
-        <img src="https://www.capouilliez.edu.gt/assets/img/logo.png" alt="Logo Colegio" height="35">
-    </footer>
-
-</body>
-</html>
+    footer img:hover {
+        transform: scale(1.3);
+    }
+</style>
